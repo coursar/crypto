@@ -1,0 +1,27 @@
+## Keys ##
+**/*.key
+**/*.crt
+**/*.csr
+**/*.pfx
+**/*.p12
+
+## Maven & Javac ##
+/out/
+/target/
+
+## Git & GitHub ##
+.git/
+.github/
+
+## Docker ##
+docker-entrypoint-initdb.d
+
+## IDEA ##
+.idea
+**/*.iws
+**/*.iml
+**/*.ipr
+
+## OS ##
+**/Thumbs.db*
+**/.DS_Store

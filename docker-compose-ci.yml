@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  crypto:
+    image: crypto
+    build: .
+    ports:
+      - "9999:9999"
+    depends_on:
+      - db
+  db:
+    image: postgres:13-alpine3.14
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=pass
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
